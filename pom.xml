@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Maven version of the xml document currently only 4.0.0 is valid -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- The GAV consists of an arbitrary descriptor that is usually in the
+    form of a reverse domain name. -->
+    <groupId>com.kfwebstandard</groupId>
+
+    <!-- This is the name given to the packaged build -->
+    <artifactId>kf_web_standard_project</artifactId>
+
+    <!-- The version of the build. Any value is valid though a number and a
+    string are common. SNAPSHOT means a project under development. FINAL is commonly
+    used to refer to stable production version -->
+    <version>1.2-SNAPSHOT</version>
+
+    <!-- Default value is jar but may be war or ear -->
+    <packaging>war</packaging>
+
+    <!-- The name given to the project. Unlike groupId and artifactId a name
+    may have spaces. This is the default but it is left in to remind you that it
+    can have a different name -->
+    <name>${project.artifactId}</name>
+
+    <!-- A description of the program -->
+    <description>Display the records from a database using JPA, CDI and JSF</description>
+
+    <!-- Identifies the programmer or programmers who worked on the project -->
+    <developers>
+        <developer>
+            <id>Enter your school id</id>
+            <name>Enter your name</name>
+            <email>Enter your email address</email>
+        </developer>
+    </developers>
+
+    <!-- The company or organization that the programmer(s) work for -->
+    <organization>
+        <name>Enter school name</name>
+    </organization>
+
+    <!-- Global settings for the project. Settings can be accessed in the pom
+    by placing the tag name in ${...} -->
+    <properties>
+        <!-- These properties must be updated to your particular setup -->
+        <payara.home>C:/devapp/payara5</payara.home>
+        <payara.domainName>domain1</payara.domainName>
+        <payara.domainDir>${payara.home}/glassfish/domains</payara.domainDir>
+
+        <skipTests>false</skipTests>
+    </properties>
+
+    <!-- All of the sample code shares the same dependencies and build         -->
+    <!-- The parent project named web_project_dependencies must be loaded into -->
+    <!-- the IDE and you must Run Maven with a goal of install:install         -->
+    <!-- Now it can be the parent pom of all projects                          --> 
+    <!-- https://gitlab.com/omniprof/web_project_dependencies.git              --> 
+    <parent>
+        <groupId>com.kfwebstandard</groupId>
+        <artifactId>web_project_dependencies</artifactId>
+        <version>1.2</version>
+    </parent>
+
+</project>
+
+
+
