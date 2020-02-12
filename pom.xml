@@ -42,11 +42,6 @@
     <!-- Global settings for the project. Settings can be accessed in the pom
     by placing the tag name in ${...} -->
     <properties>
-        <!-- These properties must be updated to your particular setup -->
-        <payara.home>C:/devapp/payara5</payara.home>
-        <payara.domainName>domain1</payara.domainName>
-        <payara.domainDir>${payara.home}/glassfish/domains</payara.domainDir>
-
         <skipTests>false</skipTests>
     </properties>
 
@@ -58,7 +53,7 @@
     <parent>
         <groupId>com.kfwebstandard</groupId>
         <artifactId>web_project_dependencies</artifactId>
-        <version>1.2</version>
+        <version>1.1</version>
     </parent>
 
 </project>

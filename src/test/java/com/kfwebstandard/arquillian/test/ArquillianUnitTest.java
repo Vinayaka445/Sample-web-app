@@ -66,7 +66,7 @@ public class ArquillianUnitTest {
                 .addPackage(RollbackFailureException.class.getPackage())
                 .addPackage(Fish.class.getPackage())
                 .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
-                .addAsWebInfResource(new File("src/main/webapp/WEB-INF/glassfish-resources.xml"), "glassfish-resources.xml")
+                .addAsWebInfResource(new File("src/main/webapp/WEB-INF/payara-resources.xml"), "payara-resources.xml")
                 .addAsResource(new File("src/main/resources/META-INF/persistence.xml"), "META-INF/persistence.xml")
                 .addAsResource(new File("src/main/resources/log4j2.xml"), "log4j2.xml")
                 .addAsResource("createFishTable.sql")
@@ -81,11 +81,11 @@ public class ArquillianUnitTest {
     @Resource(lookup = "java:app/jdbc/myAquarium")
     private DataSource ds;
 
-    @PersistenceContext(unitName = "fishiesPU")
-    private EntityManager em;
+//    @PersistenceContext(unitName = "fishiesPU")
+//    private EntityManager em;
 //
-    @Resource
-    private UserTransaction utx;
+//    @Resource
+//    private UserTransaction utx;
 
     @Test
     public void testCreate() throws RollbackFailureException, IllegalStateException, Exception {
